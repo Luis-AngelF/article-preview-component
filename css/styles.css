@@ -1,0 +1,173 @@
+:root {
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+    --GrayishBlue: hsl(212, 23%, 69%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    background: var(--LightGrayishBlue);
+}
+
+main {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: white;
+}
+
+.card-text h1 {
+    font-size: 1.3em;
+    color: var(--DesaturatedDarkBlue);
+}
+
+.card-text p {
+    color: var(--GrayishBlue);
+}
+
+.card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.author-image {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.btn-share {
+    background: var(--LightGrayishBlue);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.author-details {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.card-bottom h2 {
+    color: var(--VeryDarkGrayishBlue);
+}
+
+.card-bottom p {
+    color: var(--GrayishBlue);
+}
+
+.card-share {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-share p {
+    color: var(--GrayishBlue);
+    letter-spacing: 0.4em;
+}
+
+.card-share ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card-share img {
+    padding: 0 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .card {
+        width: 90%;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .card-image {
+        width: 100%;
+    }
+
+    .card-text {
+        margin: 20px;
+    }
+
+    .card-bottom {
+        padding: 10px 20px;
+    }
+
+    .card-bottom h2 {
+        font-size: 1.2em;
+    }
+
+    .card-bottom.active {
+        background: var(--VeryDarkGrayishBlue);
+    }
+
+    .card-share {
+        gap: 2em;
+        padding: 10px 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        display: flex;
+        max-width: 700px;
+    }
+    
+    .card-image {
+        max-width: 300px;
+    }
+    
+    .card-content {
+        padding: 20px;
+    }
+    
+    .card-text p {
+        margin: 10px 0;
+    }
+    
+    .card-bottom {
+        margin: 20px 0;
+    }
+
+    .bottom-content {
+        max-height: 50px;
+    }
+    
+    .author-details.hidden {
+        display: flex;
+    }
+
+    .card-share {
+        position: relative;
+        left: 95%;
+        bottom: 100px;
+        padding: 10px 20px;
+        gap: 2em;
+        border-radius: 10px;
+        background: var(--VeryDarkGrayishBlue);
+    }
+}
